@@ -111,3 +111,6 @@ main.spec
 *.exe
 *.out
 *.app
+build
+dist
+main.spec

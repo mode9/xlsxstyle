@@ -112,7 +112,7 @@ class XlsxStyler(QWidget):
 
 
 if __name__ == "__main__":
-    app = QApplication([])
+    app = QApplication([sys.executable])
     widget = XlsxStyler()
     widget.show()
     sys.exit(app.exec_())

@@ -1,1 +1,0 @@
-([('main', '/Users/giuk/untitled/dist/main', 'EXECUTABLE')],)
