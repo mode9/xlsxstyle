@@ -26,8 +26,7 @@ class CreateThread(QtCore.QThread):
 
     def get_new_filename(self) -> str:
         today: datetime.date = datetime.date.today()
-        DIR: str = os.path.abspath(os.path.curdir)
-        file_dir: str = os.path.join(DIR, today.strftime("%Y%m%d"))
+        file_dir: str = os.path.join(os.path.dirname(__file__), today.strftime("%Y%m%d"))
         file_dir: str = self.check_unique_filename(file_dir)
         return file_dir
 
@@ -43,7 +42,7 @@ class CreateThread(QtCore.QThread):
         org_handler.copy_styles(target_handler)
         self.text_browser.insertPlainText("INFO: 스타일 복사 완료\n")
         fn = self.get_new_filename() + '.xlsx'
-        self.target_wb.save(fn)
+        self.target_wb.save(os.path.join(os.path.abspath(__file__), fn))
         self.text_browser.insertPlainText(f"INFO: 파일 생성 완료 ({fn}) \n")
         self.finished.emit()
         self.org_wb.close()

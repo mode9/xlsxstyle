@@ -116,10 +116,3 @@ class RowHandler:
     @property
     def code(self):
         return self._row[self._code_idx].value
-
-
-if __name__ == '__main__':
-
-    org_filename = '210215.xlsx'
-    new_filename = 'temp.xlsx'
-

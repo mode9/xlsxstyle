@@ -9,3 +9,4 @@ PyQt5==5.15.2
 PyQt5-sip==12.8.1
 PySide2==5.15.2
 shiboken2==5.15.2
+sip
